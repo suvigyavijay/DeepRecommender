@@ -2,7 +2,7 @@
 An implementation of the research described in: "Training Deep AutoEncoders for Collaborative Filtering" (https://arxiv.org/abs/1708.01715) in Tensorflow & Keras
 
 ### The Model
-The model is based on deep AutoEncoders.
+The model is based on Deep AutoEncoders with dense re-feeding.
 
 ![AutoEncoderPic](./model.png)
 
@@ -45,6 +45,7 @@ In browser, open http://localhost:6006
 ### Get the data
 
 **Note: The following are not required to run the code demo, might only be downloaded to run original architechure. Skip this step, files for demo are already preprocessed and included for convenience.**
+
 Download from [here](http://academictorrents.com/details/9b13183dc4d60676b773c9e2cd6de5e5542cee9a) into your ```DeepRecommender``` folder
 ```
 $ tar -xvf nf_prize_dataset.tar.gz
@@ -60,8 +61,11 @@ $ python ./netflix_data_convert.py training_set nf_data
 
 ## Note
 The actual dataset is not used in this demo, becuase of lack of computation power at user end. The original dataset is large and forms a `311315 x 17736` user-movie matrix which cannot be processed on regular laptops. 
+
 We have reduced the dataset to `13118 x 1000` using a fator `k=(17736/1000)` for demo purposes, though this produces more error due to lesser size of training data. The layer sizes have also been reduced proportionately to display the autoencoder functionality.
+
 Higher layer sizes perform better but it doesn't depict the purpose of autoencoders to compress data.
+
 The original dataset can be used to produce more accurate results but would require huge computation power and memory and time to process.
 
 ## Results
