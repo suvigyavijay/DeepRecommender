@@ -38,7 +38,7 @@ $ jupyter notebook
 In browser, open http://localhost:8888/
 In another terminal window:
 ```
-$ tensorboard --logdir==./logs
+$ tensorboard --logdir=./logs
 ```
 In browser, open http://localhost:6006
 
